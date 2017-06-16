@@ -122,7 +122,8 @@ This next line of code uses the descriptive variable names from the 'features' t
 `names(xAll) <- c("subject", "activity", as.vector(features[,2]), "partition")`
 <br>
 
-Now I need to subset 'xAll' to "extract only the measurements on the mean and standard deviation for each measurement".  First I create a character vector with names of only those variables that contain the mean or standard deviation of a measurement.  I use grep to keep only variables whose names contain "mean(" or "std", in addition to subject and activity created above, as I will need those for the final step (step 5 in the instructions)
+Now I need to subset 'xAll' to "extract only the measurements on the mean and standard deviation for each measurement".  First I create a character vector with names of only those variables that contain the mean or standard deviation of a measurement.  I use grep to keep only variables whose names contain "mean(" or "std", in addition to subject and activity created above, as I will need those for the final step (step 5 in the instructions).
+
 I intentionally exclude the following (R script requirement #2 was not specifc, so this is what I chose to do):
 * variables with 'meanFreq' in the name
 * angle(tBodyAccMean,gravity)
@@ -158,3 +159,5 @@ I create "a second, independent tidy data set with the average of each variable 
 Finally, I write tidyMeans to a txt file so I can upload to Coursera
 
 `write.table(tidyMeans, file="./CourseProject_TidyMeans.txt", row.name=FALSE)`
+
+The tidyMeans table has 40 observations and 68 variables.  Each observation represents a unique grouping of subject and activity.  Each variable represents one of the subset of variables of interest from the measurement data
