@@ -160,4 +160,4 @@ Finally, I write tidyMeans to a txt file so I can upload to Coursera
 
 `write.table(tidyMeans, file="./CourseProject_TidyMeans.txt", row.name=FALSE)`
 
-The tidyMeans table has 40 observations and 68 variables.  Each observation represents a unique grouping of subject and activity.  Each variable represents one of the subset of variables of interest from the measurement data
+The tidyMeans table has 40 observations and 68 variables.  Each observation represents a unique grouping of subject and activity.  Each variable represents one of the subset of variables of interest from the measurement data. The values represent the mean of those variables of interest (those that were means or standard devfiations of some vector of measurement values).
