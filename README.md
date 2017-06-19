@@ -157,6 +157,7 @@ I then assign descriptive column names to the data sets.  The names for the meas
 
 For both the test and training measurement data sets, I use `cbind()` to effectively add a subject identifier and an activity identifier to each observation.  These results were not as expected when I performed this without sort our 'match_index' from the contributing tables.
 I use subsetting to only take the columns of interest from the subject and y tables.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`xtrain_2 <- cbind(xtrain_1, "subject_id"=subject_train_1[ ,"subject_id"], "activity_code"=ytrain_1[ ,"activity_code"])`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`xtest_2 <- cbind(xtest_1, "subject_id"=subject_test_1[ ,"subject_id"], "activity_code"=ytest_1[,"activity_code"])`
@@ -171,6 +172,7 @@ This generates a warning about duplicates. I ran several tests to determine that
 <br><br>
 
 Now that the training and test data sets have subject and activity names added to them, I can combine them into one data set.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`xAll <- rbind(xtest_3, xtrain_3)`
 <br><br>
 
