@@ -220,6 +220,7 @@ Now I clean up xKeep variable names to make them more readable. I remove "-" and
 
 ### **Step 5 - The Tidy Dataset**
 I create "a second, independent tidy data set with the average of each variable for each activity and each subject".  I utilize chaining for this task.  I struggled to get the output I wanted and found the 'summarize_all()' function through researching how to do what I wanted.  I interpreted "the average of each variable for each activity and each subject" to mean that we should group xKeep by both subject and activity, and then perform a mean on each measurement variable.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`tidyMeans <- xKeep %>% group_by(subject_id, activity) %>% summarize_all(funs(mean))`
 <br>
 
